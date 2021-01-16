@@ -17,7 +17,35 @@ class HomePage extends StatelessWidget {
         title: Text('Flutter App'),
       ),
       body: Container(
-        child: Text('Flutter is a great technology by Google.'),
+        height: 500,
+        color: Colors.teal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
+              color: Colors.red,
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
+              color: Colors.yellow,
+            ),
+            Container(
+              padding: const EdgeInsets.all(8),
+              width: 100,
+              height: 100,
+              alignment: Alignment.center,
+              color: Colors.green,
+            )
+          ],
+        ),
       ),
     );
   }
