@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:freecodecamp_flutter/drawer.dart';
+import 'package:freecodecamp_flutter/pages/login_page.dart';
+import 'package:freecodecamp_flutter/utils/constants.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class HomePage extends StatefulWidget {
+  static const String routeName = "/home";
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -38,6 +42,15 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: Text('Flutter App'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.exit_to_app), 
+            onPressed: () {
+              Constants.prefs.setBool("loggedIn", false);
+              Navigator.pushReplacementNamed(context, LoginPage.routeName);
+            }
+          )
+        ],
       ),
       body: data != null
           ? ListView.builder(
