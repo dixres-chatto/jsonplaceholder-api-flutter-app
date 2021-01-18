@@ -1,8 +1,4 @@
-# freecodecamp_flutter
-
-Flutter Mobile 
-
-## Getting Started
+# Flutter Mobile
 
 This project was developed using Flutter. 
 
