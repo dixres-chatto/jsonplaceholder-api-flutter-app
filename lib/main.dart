@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:freecodecamp_flutter/pages/home_page.dart';
+import 'package:freecodecamp_flutter/pages/home_page_with_fb.dart';
 import 'package:freecodecamp_flutter/pages/login_page.dart';
 import 'package:freecodecamp_flutter/utils/constants.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -16,14 +17,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Constants.prefs.getBool("loggedIn") == true
-          ? HomePage()
+          ? HomePageFB()
           : LoginPage(),
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
       routes: {
         LoginPage.routeName: (context) => LoginPage(),
-        HomePage.routeName: (context) => HomePage(),
+        HomePageFB.routeName: (context) => HomePageFB(),
       },
     );
   }

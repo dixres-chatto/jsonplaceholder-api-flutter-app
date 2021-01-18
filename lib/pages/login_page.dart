@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:freecodecamp_flutter/pages/home_page.dart';
+// import 'package:freecodecamp_flutter/pages/home_page.dart';
+import 'package:freecodecamp_flutter/pages/home_page_with_fb.dart';
 import 'package:freecodecamp_flutter/utils/constants.dart';
 
 class LoginPage extends StatefulWidget {
@@ -20,7 +21,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Welcome to Dixre!"),
+        title: Text("Flutter :: Demo API App"),
       ),
       body: Stack(
         fit: StackFit.expand,
@@ -67,7 +68,7 @@ class _LoginPageState extends State<LoginPage> {
                               Constants.prefs.setBool("loggedIn", true);
                               // Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
 
-                              Navigator.pushReplacementNamed(context, HomePage.routeName);
+                              Navigator.pushReplacementNamed(context, HomePageFB.routeName);
                             },
                             child: Text("Sign In"),
                             color: Colors.purple,
