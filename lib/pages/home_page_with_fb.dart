@@ -54,18 +54,18 @@ class HomePageFB extends StatelessWidget {
                   child: Text("Some error occured."),
                 );
               }
-
-              return ListView.builder(
-                itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(snapshot.data[index]['title']),
-                    subtitle: Text("ID: ${snapshot.data[index]["id"]}"),
-                    leading: Image.network(snapshot.data[index]["url"]),
-                  );
-                }, 
-                itemCount: snapshot.data.length
-              );
           }
+
+          return ListView.builder(
+            itemBuilder: (context, index) {
+              return ListTile(
+                title: Text(snapshot.data[index]['title']),
+                subtitle: Text("ID: ${snapshot.data[index]["id"]}"),
+                leading: Image.network(snapshot.data[index]["url"]),
+              );
+            }, 
+            itemCount: snapshot.data.length
+          );
         },
       ),
       drawer: MyDrawer(),
