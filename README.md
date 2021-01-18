@@ -1,4 +1,4 @@
-# Flutter Mobile
+# Flutter Mobile App
 
 This project was developed using Flutter. 
 
